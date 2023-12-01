@@ -1,12 +1,11 @@
-import { useRef } from "react";
-import Input from "./input-hook/Input";
+import Input from "./Input";
 
 let Questions = (props) => {
     return (
         <div>
             <Input 
                 id={props.question.id} 
-                question={props.question.text} 
+                question={props.question.question} 
                 description={props.question.description}
                 onAnswer={props.onAnswer}>
             </Input>

@@ -1,0 +1,34 @@
+.question{
+    width : auto;
+    min-height: 500px;
+    height: auto;
+}
+
+.btn_prev{
+    position: absolute;
+    top:auto;
+    left:17vw;
+}
+
+.btn_next{
+    position: absolute;
+    right:17vw;
+}
+
+.btn_submit{
+    position: absolute;
+    left:50vw;
+    transform: translate(-50%,125%);
+}
+
+.button{
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    transition-property: transform, box-shadow;
+    transition: 300ms;
+}
+.button:hover{
+    transform: scale(1.08);
+    box-shadow: 
+    0 0 0 1px white,
+    0 0 3px 2px green;
+}
