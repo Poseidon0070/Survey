@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from "react";
 
 const Input = (props) => {
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState("2");
+  console.log(props.id)
+  console.log(Object.keys(props.answers))
 
   useEffect(() => {
-    setInputValue("");
-  }, [props.id]);
+    if(Object.keys(props.answers) && (props.id-1) in Object.keys(props.answers)){
+      setInputValue(props.answers[props.id-1])
+    }else{
+      setInputValue("");
+    }
+  }, [props.id, props.answers]);
 
   const answerHandler = (event) => {
     setInputValue(event.target.value);

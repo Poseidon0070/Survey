@@ -19,7 +19,7 @@ let Survey = (props) => {
     let [answer, setAnswer] = useState({})
     let [questionsFetched, setQuestionsFetched] = useState(false);
     let totalQuestion = Que.length
-    let submisionValid = Object.keys(answer).length === totalQuestion ? true : false
+    let submissionValid = Object.keys(answer).length === totalQuestion ? true : false
 
     useEffect(() => {
         const fetchQuestions = async () => {
@@ -85,7 +85,7 @@ let Survey = (props) => {
                 <div className="d-flex justify-content-center">
                     <span className="fs-3 me-4 mb-3">Question : {questionNumber+1}/{totalQuestion}</span>
                 </div>
-                <Questions question={Que[questionNumber]} onAnswer={onAnswer} />
+                <Questions question={Que[questionNumber]} onAnswer={onAnswer} answers={answer}/>
             </div>
             <div className="mt-5">
                 <button className={`btn btn-lg btn-primary ${classes.btn_prev} ${classes.button}`} onClick={previousQuestion}>
@@ -100,7 +100,7 @@ let Survey = (props) => {
                 </button>
             </div>
             <div>
-                <button className={`btn btn-lg btn-success ${classes.btn_submit}`} style={{height:"60px"}} onClick={submitHandler} hidden={!submisionValid}>Submit</button>
+                <button className={`btn btn-lg btn-success ${classes.btn_submit}`} style={{height:"60px"}} onClick={submitHandler} disabled={!submissionValid}>Submit</button>
             </div>
         </div>
     )

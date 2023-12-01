@@ -7,3 +7,7 @@
     width : 100vw;
 }
 
+button:disabled{
+    cursor: not-allowed;
+  }
+

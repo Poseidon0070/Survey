@@ -7,7 +7,8 @@ let Questions = (props) => {
                 id={props.question.id} 
                 question={props.question.question} 
                 description={props.question.description}
-                onAnswer={props.onAnswer}>
+                onAnswer={props.onAnswer}
+                answers={props.answers}>
             </Input>
         </div>
     )
