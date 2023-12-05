@@ -10,7 +10,6 @@ let Ques = [
     { id: 5, text: 'What could we do to improve our service?', description : {type: 'text'} }
 ]
 
-
 console.log(Ques)
 let Que = []
 
